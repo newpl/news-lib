@@ -9,25 +9,45 @@
 
 	<name>common-lib</name>
 	<description>common-lib</description>
+	<sourceDirectory>src/main/java</sourceDirectory>
 
- 	<parent>
+	<parent>
 		<groupId>com.news</groupId>
 		<artifactId>news-lib</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
 	</parent>
- 
+
+	<dependencies>
+		<!-- about spring boot -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<version>2.1.1.RELEASE</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+			<version>2.1.1.RELEASE</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- about jpa -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<version>2.1.1.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate.validator</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>6.0.13.Final</version>
+		</dependency>
+	</dependencies>
+
 	<build>
-	    <sourceDirectory>src/main/java</sourceDirectory>
-	    <plugins>
-	      <plugin>
-	        <artifactId>maven-compiler-plugin</artifactId>
-	        <configuration>
-	          <source>1.8</source>
-	          <target>1.8</target>
-	        </configuration>
-	      </plugin>
-	    </plugins>
+		<sourceDirectory>${basedir}/src/main/java</sourceDirectory>
 	</build>
 
 </project>
