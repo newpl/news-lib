@@ -9,7 +9,6 @@
 
 	<name>common-lib</name>
 	<description>common-lib</description>
-	<sourceDirectory>src/main/java</sourceDirectory>
 
 	<parent>
 		<groupId>com.news</groupId>
