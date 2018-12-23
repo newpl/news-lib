@@ -6,8 +6,10 @@ import com.news.restapi.article.vo.ArticleRestVO;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 public interface ArticleServiceClient {
-	@GET("/article/test/test1")
-	Call<List<ArticleRestVO>> getArticleListByTitle(String title);
+	@GET("/api/article/test/test1/{title}")
+	Call<List<ArticleRestVO>> getArticleListByTitle(@Path("title") String title, @Query("userNo") long userNo);
 }
