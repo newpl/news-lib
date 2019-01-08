@@ -15,7 +15,7 @@ public class ArticleAPI {
 		client = ApiServiceFactory.getClient(ArticleServiceClient.class);
 	}
 
-	public List<ArticleRestVO> getArticleListByTitle(ArticleRestVO articleVO) {
+	public static List<ArticleRestVO> getArticleListByTitle(ArticleRestVO articleVO) {
 		try {
 			Response<List<ArticleRestVO>> response = client
 					.getArticleListByTitle(articleVO.getTitle(), articleVO.getUserNo()).execute();
